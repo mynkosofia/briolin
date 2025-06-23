@@ -48,7 +48,7 @@ mongoose.connection.on('error', (err) =>{
 });
 
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
     console.log("The server was running on the port: " + port)
 });
 
