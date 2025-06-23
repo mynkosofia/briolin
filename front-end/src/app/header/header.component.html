@@ -1,0 +1,28 @@
+<div class="d-flex flex-md-row align-items-center justify-content-between p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+  <!-- Лівий блок: Sign in/up -->
+  <div class="d-flex flex-column align-items-start">
+    <div>
+      <a *ngIf="!authService.isAuthenticated()" class="btn btn-outline-primary btn-sm mr-2" [routerLink]="['/auth']">{{ 'SIGN_IN' | translate }}</a>
+      <a *ngIf="!authService.isAuthenticated()" class="btn btn-outline-primary btn-sm" [routerLink]="['/reg']">{{ 'SIGN_UP' | translate }}</a>
+    </div>
+  </div>
+  <!-- Центральний блок: логотип -->
+  <div class="text-center flex-grow-1">
+    <h5 class="my-0 font-weight-normal">{{ 'BLOG_TITLE' | translate }}</h5>
+  </div>
+  <!-- Правий блок: навігація + logout -->
+  <div class="d-flex flex-column align-items-end">
+    <div class="mb-2">
+      <a *ngIf="authService.isAuthenticated()" class="btn btn-outline-warning btn-sm" (click)="logoutUser()">{{ 'LOGOUT' | translate }}</a>
+      <button class="btn btn-link p-1" (click)="switchLang('uk')">UA</button>
+      <button class="btn btn-link p-1" (click)="switchLang('en')">EN</button>
+    </div>
+    <div class="mb-2">
+      <a class="p-2 text-dark" [routerLink]="['/']" (click)="onHomeClick()">{{ 'HOME' | translate }}</a>
+      <a routerLink="/about">{{ 'ABOUT' | translate }}</a>
+      <a *ngIf="authService.isAuthenticated()" class="p-2 text-dark" [routerLink]="['/dashboard']">{{ 'DASHBOARD' | translate }}</a>
+      <a *ngIf="authService.isAuthenticated()" class="p-2 text-dark" [routerLink]="['/profile']">{{ 'PROFILE' | translate }}</a>
+      <a *ngIf="user?.role === 'admin'" class="p-2 text-danger font-weight-bold" [routerLink]="['/admin']">{{ 'ADMIN_PANEL' | translate }}</a>
+    </div>
+  </div>
+</div>

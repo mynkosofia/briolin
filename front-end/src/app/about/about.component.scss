@@ -1,0 +1,93 @@
+.about-page {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 32px 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.about-page h2 {
+  color: #000000;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+.about-team ul {
+  padding-left: 18px;
+}
+.about-team li {
+  margin-bottom: 6px;
+}
+
+
+
+.about-video-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.video-row {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap; /* для адаптивності на мобільних */
+}
+
+.about-video {
+  border-radius: 0px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: #000;
+  max-width: 100%;
+  height: auto;
+}
+
+.about-text {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .video-row {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  .about-video {
+    width: 100% !important;
+    max-width: 420px;
+  }
+}
+
+.about-video-text-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.about-video-text-row.reverse {
+  flex-direction: row-reverse !important;
+}
+.about-video-col {
+  flex: 0 0 350px;
+  margin: 0 16px;
+}
+.about-text-col {
+  flex: 1;
+  margin: 0 16px;
+  text-align: justify;
+}
+@media (max-width: 900px) {
+  .about-video-text-row,
+  .about-video-text-row.reverse {
+    flex-direction: column !important;
+    align-items: stretch;
+  }
+  .about-video-col,
+  .about-text-col {
+    margin: 8px 0;
+  }
+}
+.about-text-col p {
+  text-align: justify;
+}

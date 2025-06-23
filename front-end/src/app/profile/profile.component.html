@@ -1,0 +1,33 @@
+<div class="profile-info" *ngIf="user">
+  <h2>{{ 'USER_PROFILE' | translate }}</h2>
+  <p><strong>{{ 'NAME' | translate }}:</strong> {{ user.name }}</p>
+  <p><strong>{{ 'LOGIN' | translate }}:</strong> {{ user.login }}</p>
+  <p><strong>{{ 'EMAIL' | translate }}:</strong> {{ user.email }}</p>
+  <p><strong>{{ 'ROLE' | translate }}:</strong> {{ user.role | translate }}</p>
+</div>
+
+<hr>
+<div class="container mt-4">
+  <h4>{{ 'YOUR_POSTS' | translate }}</h4>
+  <div class="posts-container">
+    <ng-container *ngIf="userPosts.length > 0; else noPosts">
+      <div *ngFor="let post of userPosts" class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">{{ post.title }}</h5>
+          <p class="card-text">{{ 'CATEGORY' | translate }}: {{ post.category | translate }}</p>
+          <div [innerHTML]="post.photo"></div>
+          <p class="card-text">{{ getShortText(post.text, 100) }}</p>
+          <small class="text-muted">{{ post.date | date:'short' }}</small>
+          <div class="mt-2">
+            <button class="btn btn-primary btn-sm" (click)="viewPost(post._id)">{{ 'VIEW' | translate }}</button>
+            <button class="btn btn-warning btn-sm" (click)="editPost(post._id)">{{ 'EDIT' | translate }}</button>
+            <button class="btn btn-danger btn-sm" (click)="deletePost(post._id)">{{ 'DELETE' | translate }}</button>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    <ng-template #noPosts>
+      <p>{{ 'NO_POSTS_YET' | translate }}</p>
+    </ng-template>
+  </div>
+</div>

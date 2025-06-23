@@ -1,0 +1,53 @@
+<div class="d-flex justify-content-end mb-3"
+     *ngIf="!router.url.startsWith('/reg') && !router.url.startsWith('/auth') && !router.url.startsWith('/post')">
+  <form class="form-inline d-flex align-items-center" (submit)="onSearch()">
+  <div class="input-group">
+    <input class="form-control search-input" type="search" [placeholder]="'SEARCH' | translate" [(ngModel)]="searchQuery" name="search">
+    <button class="btn btn-outline-success" type="submit">
+      <i class="bi bi-search"></i>
+    </button>
+  </div>
+</form>
+</div>
+<div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between">
+      <a class="p-2 text-muted" (click)="setCategory('Haircuts')">{{ 'HAIRCUTS' | translate }}</a>
+      <a class="p-2 text-muted" (click)="setCategory('Beard Care')">{{ 'BEARD_CARE' | translate }}</a>
+      <a class="p-2 text-muted" (click)="setCategory('Barber Tools')">{{ 'BARBER_TOOLS' | translate }}</a>
+      <a class="p-2 text-muted" (click)="setCategory('Barber Tips')">{{ 'BARBER_TIPS' | translate }}</a>
+      <a class="p-2 text-muted" (click)="setCategory('Trends')">{{ 'TRENDS' | translate }}</a>
+      <a class="p-2 text-muted" (click)="setCategory('Barbershop Culture')">{{ 'BARBERSHOP_CULTURE' | translate }}</a>
+      <a class="p-2 text-muted" (click)="setCategory('Client Stories')">{{ 'CLIENT_STORIES' | translate }}</a>
+      <a class="p-2 text-muted" (click)="setCategory('Events & Competitions')">{{ 'EVENTS_COMPETITIONS' | translate }}</a>
+      <a class="p-2 text-muted" (click)="setCategory('Training & Education')">{{ 'TRAINING_EDUCATION' | translate }}</a>
+    </nav>
+  </div>
+
+  <div class="row d-flex">
+    <div class="figure">
+        <img class="photo" src="https://images.pexels.com/photos/8552626/pexels-photo-8552626.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+         <div class="figure-overlay"></div>
+  <div class="figure-content">
+        <div class="col-md-6 px-0 p-5">
+          <h1 class="display-4 font-italic text-white">{{ 'WELCOME' | translate }}</h1>
+          <p class="lead my-3">{{ 'WELCOME_TEXT' | translate }}</p>
+          <p class="lead mb-0"><a [routerLink]="['/reg']" class="text-white font-weight-bold">{{ 'REGISTRATION' | translate }}</a></p>
+        </div>
+      </div></div>
+
+      <div *ngFor="let post of filteredPosts" class="col-md-4">
+        <div class="p-0 mb-4 box-shadow">
+          <quill-view [content]="post.photo"></quill-view>
+          <div class="card-body mb-3">
+           <div class="post-meta-row d-flex justify-content-between align-items-center">
+  <strong class="mb-2 text-primary">{{ post.category | translate }}</strong>
+  <small class="text-muted">{{ post.date | date: "short" }}</small>
+</div>
+            <h4 class="m-0 fixed-title">
+                <a class="text-dark fixed-title-link" [routerLink]="['post', post._id]">{{ post.title }}</a>
+            </h4>
+            <quill-view class="fixed-post-text" [content]="post.text"></quill-view>
+          </div>
+        </div>
+      </div>
+  </div>

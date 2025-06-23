@@ -1,0 +1,23 @@
+<body class="container">
+  <form (submit)="createPost()" class="form-signin">
+    <h1 class="h3 mb-3 text-center font-weight-normal">{{ 'CREATE_POST' | translate }}</h1>
+    <label>{{ 'CATEGORY_TITLE_PHOTO' | translate }}</label>
+    <select [(ngModel)]="category" class="form-control mb-3" name="category" id="category">
+      <option value="Haircuts">{{ 'HAIRCUTS' | translate }}</option>
+      <option value="Beard Care">{{ 'BEARD_CARE' | translate }}</option>
+      <option value="Barber Tools">{{ 'BARBER_TOOLS' | translate }}</option>
+      <option value="Barber Tips">{{ 'BARBER_TIPS' | translate }}</option>
+      <option value="Trends">{{ 'TRENDS' | translate }}</option>
+      <option value="Barbershop Culture">{{ 'BARBERSHOP_CULTURE' | translate }}</option>
+      <option value="Client Stories">{{ 'CLIENT_STORIES' | translate }}</option>
+      <option value="Events & Competitions">{{ 'EVENTS_COMPETITIONS' | translate }}</option>
+      <option value="Training & Education">{{ 'TRAINING_EDUCATION' | translate }}</option>
+    </select>
+    <input [(ngModel)]="title" type="title" name="title" id="inputTitle" class="form-control mb-3" [placeholder]="'TITLE' | translate">
+    <quill-editor [(ngModel)]="photo" name="photo" [placeholder]="'PHOTO' | translate"></quill-editor>
+    <label class="mt-3">{{ 'INFORMATION' | translate }}</label>
+    <quill-editor [(ngModel)]="text" name="text" [placeholder]="'TEXT' | translate"></quill-editor>
+    <div class="checkbox mb-3"></div>
+    <button class="btn btn-lg btn-primary btn-block mb-5" type="submit">{{ 'CREATE' | translate }}</button>
+  </form>
+</body>

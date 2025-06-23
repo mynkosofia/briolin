@@ -1,0 +1,134 @@
+.card {
+  width: 400px;
+  height: 500px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+  background: #fff;
+}
+.card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+}
+
+.card-body {
+  padding: 0.5rem;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+::ng-deep .card-body img {
+  width: 320px !important;
+  height: 200px !important;
+  object-fit: cover !important;
+  display: block !important;
+  margin: 0 auto 10px auto !important;
+  border-radius: 8px !important;
+}
+
+.posts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+  align-items: stretch;
+  margin-top: 24px;
+}
+
+.profile-info {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 24px 32px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  max-width: 500px;
+  border-left: 6px solid #000000;
+}
+
+.profile-info h2 {
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #000000;
+  letter-spacing: 1px;
+}
+
+.profile-info p {
+  margin: 0 0 8px 0;
+  font-size: 1.05rem;
+}
+
+.container.mt-4 {
+  max-width: 800px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #343a40;
+}
+
+.card-text {
+  margin-bottom: 8px;
+}
+
+.btn-sm {
+  min-width: 80px;
+  margin-right: 8px;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+.btn-primary.btn-sm {
+  background: #0194e9;
+  border: none;
+}
+.btn-primary.btn-sm:hover {
+  background: #0056b3;
+}
+
+.btn-warning.btn-sm {
+  background: #dcdcdc;
+  border: none;
+  color: #212529;
+}
+.btn-warning.btn-sm:hover {
+  background: #8b8b8b;
+}
+
+.btn-danger.btn-sm {
+  background: #dc3545;
+  border: none;
+}
+.btn-danger.btn-sm:hover {
+  background: #a71d2a;
+}
+
+.btn-sm:last-child {
+  margin-right: 0;
+}
+
+.text-muted {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .profile-info, .container.mt-4 {
+    padding: 10px;
+    max-width: 100%;
+  }
+  .card-body {
+    padding: 12px;
+  }
+  .card {
+    width: 100%;
+    height: auto;
+  }
+}

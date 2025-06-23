@@ -1,0 +1,24 @@
+<div class="container mt-4">
+  <h2>{{ 'USER_LIST' | translate }}</h2>
+  <ul class="list-group" *ngIf="users.length > 0; else noUsers">
+    <li *ngFor="let user of users" class="list-group-item">
+      <b>{{user.login}}</b> ({{user.email}})
+      <button class="btn btn-danger btn-sm ml-2" (click)="deleteUser(user._id)">{{ 'DELETE_USER' | translate }}</button>
+      <ul class="mt-2">
+        <li *ngFor="let post of userPosts[user.login]">
+          <b class="admin-post-title">{{post.title}}</b> |
+          <span class="text-muted">{{post.category}}</span>
+           <div class="admin-btn-group">
+      <button class="btn btn-primary btn-sm ml-2" (click)="viewPost(post._id)">{{ 'VIEW' | translate }}</button>
+      <button class="btn btn-warning btn-sm ml-2" (click)="editPost(post._id)">{{ 'EDIT' | translate }}</button>
+      <button class="btn btn-danger btn-sm ml-2" (click)="deletePost(post._id, user.login)">{{ 'DELETE' | translate }}</button>
+    </div>
+        </li>
+        <li *ngIf="userPosts[user.login]?.length === 0" class="text-muted">{{ 'NO_POSTS' | translate }}</li>
+      </ul>
+    </li>
+  </ul>
+  <ng-template #noUsers>
+    <div class="alert alert-info">{{ 'NO_USERS' | translate }}</div>
+  </ng-template>
+</div>

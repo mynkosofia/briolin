@@ -1,0 +1,12 @@
+<body class="text-center container">
+  <form (submit)="signIn()" class="form-signin">
+    <img class="mb-4" src="https://cdn.leonardo.ai/users/c1616a2b-cb9b-4bbe-b7e5-4a69409f381d/generations/94883d7a-fbe5-412a-8129-f37384bb11b1/Leonardo_Phoenix_10_A_sleek_highcontrast_black_and_white_photo_1.jpg" alt="" width="400" height="240" >
+    <h1 class="h3 mb-3 font-weight-normal">{{ 'PLEASE_SIGN_IN' | translate }}</h1>
+  
+    <input [(ngModel)]="login" type="login" name="login" id="inputLogin" class="form-control" [placeholder]="'LOGIN' | translate">
+    <input [(ngModel)]="password" type="password" name="password" id="inputPassword" class="form-control" [placeholder]="'PASSWORD' | translate">
+    <div class="checkbox mb-3"></div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">{{ 'SIGN_IN' | translate }}</button> 
+    <p class="mt-5 mb-3 text-muted">© 2025</p>
+  </form>
+</body>

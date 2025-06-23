@@ -1,0 +1,96 @@
+{
+  "HOME": "Home",
+  "ABOUT": "About",
+  "SERVICES": "Services",
+  "CONTACTS": "Contacts",
+  "SLOGAN": "your style, your choice!",
+  "FOOTER_COPYRIGHT": "© 2025 Briolin Barber Blog",
+
+  "USER_LIST": "User List",
+  "DELETE_USER": "Delete user",
+  "VIEW": "View",
+  "EDIT": "Edit",
+  "DELETE": "Delete",
+  "NO_POSTS": "No posts",
+  "NO_USERS": "No users",
+
+  "PLEASE_SIGN_IN": "Please sign in",
+  "LOGIN": "Login",
+  "PASSWORD": "Password",
+  "SIGN_IN": "Sign in",
+
+  "CREATE_POST": "Create Post:",
+  "CATEGORY_TITLE_PHOTO": "Category, Title and Photo:",
+  "HAIRCUTS": "Haircuts",
+  "BEARD_CARE": "Beard Care",
+  "BARBER_TOOLS": "Barber Tools",
+  "BARBER_TIPS": "Barber Tips",
+  "TRENDS": "Trends",
+  "BARBERSHOP_CULTURE": "Barbershop Culture",
+  "CLIENT_STORIES": "Client Stories",
+  "EVENTS_COMPETITIONS": "Events & Competitions",
+  "TRAINING_EDUCATION": "Training & Education",
+  "TITLE": "Title",
+  "PHOTO": "Photo",
+  "INFORMATION": "Information:",
+  "TEXT": "Text",
+  "CREATE": "Create",
+
+  "EDIT_POST": "Edit Post:",
+  "SAVE": "Save",
+
+  "ADDRESS": "Ternopil",
+  "PHONE": "+38 (096) ***-**-**",
+  "EMAIL": "info@briolin.com",
+  "INSTAGRAM": "Instagram",
+  "FACEBOOK": "Facebook",
+  "TIKTOK": "TikTok",
+  "PRIVACY_POLICY": "Privacy Policy",
+  "TERMS": "Terms of Use",
+
+  "SIGN_UP": "Sign up",
+  "LOGOUT": "Logout",
+  "DASHBOARD": "Dashboard",
+  "PROFILE": "Profile",
+  "ADMIN_PANEL": "Admin Panel",
+  "BLOG_TITLE": "Blog \"Briolin\"",
+
+  "SEARCH": "Search...",
+  "WELCOME": "Welcome!",
+  "WELCOME_TEXT": "This blog publishes news and interesting materials from the world of barbering: modern haircuts, beard care, tool reviews, trends, client stories, and professional tips. Join us, register, and share your first post in the barber community!",
+  "REGISTRATION": "Registration...",
+
+  "AUTHOR": "Author",
+  "DATE": "Date",
+  "BACK_TO_ADMIN": "Back to admin panel",
+  "BACK_TO_PROFILE": "Back to profile",
+
+  "YOUR_POSTS": "Your posts:",
+  "CATEGORY": "Category",
+  "NO_POSTS_YET": "You have no posts yet.",
+
+  "PLEASE_SIGN_UP": "Please sign up",
+ 
+  "USER_PROFILE": "User Profile",
+  "NAME": "Name",
+  "LOGIN": "Login",
+  "EMAIL": "Email",
+  "ROLE": "Role",
+  "PROFILE": "Profile",
+  "YOUR_POSTS": "Your posts",
+  "CATEGORY": "Category",
+  "VIEW": "View",
+  "EDIT": "Edit",
+  "DELETE": "Delete",
+  "NO_POSTS_YET": "No posts yet",
+  "COMMENTS": "Comments",
+"ADD_COMMENT": "Add comment",
+
+
+  
+  "ABOUT": "About",
+"ABOUT_TEXT": "I am Sofia, the author and founder of Briolin Barber Blog. My journey in the world of beauty began with work in the hairdressing industry, where I also had the opportunity to try myself as a barber. This experience gave me an understanding of how important barbershop culture, the professionalism of masters, and a quality approach to men's style are.",
+"ABOUT_TEXT2": "Briolin Barber Blog was created to become a platform for sharing knowledge, inspiration, and experience among barbers, clients, and everyone interested in modern men's haircuts, beard care, tools, trends, and stories from the life of barbershops. I strive for this blog to be not only a source of useful information but also a place for communication, support, and the development of the barber community.",
+"ABOUT_TEXT3": "This blog is not just about haircuts and beard care. It's about style and self-expression. I believe that every barber can become an artist, and every client can be a part of this culture. Join us, share your stories, experiences, and inspiration. Together, we will create something special!"
+
+}
