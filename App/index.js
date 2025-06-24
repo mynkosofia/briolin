@@ -52,7 +52,7 @@ app.listen(port, '0.0.0.0', () => {
     console.log("The server was running on the port: " + port)
 });
 
-app.get('/', (req, res) => {
+app.get('/api/posts', (req, res) => {
 Post.find().then( posts => res.json(posts))
 });
 
