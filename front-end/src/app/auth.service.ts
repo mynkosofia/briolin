@@ -16,12 +16,12 @@ export class AuthService {
 
   registerUser(user: any) {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' }); 
-    return this.http.post('http://localhost:3000/account/reg', user, { headers });
+    return this.http.post('/account/reg', user, { headers });
   }
   
 authUser(user: any) {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post('http://localhost:3000/account/auth', user, { headers });
+    return this.http.post('/account/auth', user, { headers });
   }
 
   storeUser(token: any, user: any) {
@@ -48,20 +48,20 @@ authUser(user: any) {
     'Authorization': localStorage.getItem('token') || '',
     'Content-Type': 'application/json'
   });
-  return this.http.post('http://localhost:3000/account/dashboard', post, { headers });
+  return this.http.post('/account/dashboard', post, { headers });
 }
 
    getAllPosts() {
-  return this.http.get<any[]>('http://localhost:3000');
+  return this.http.get<any[]>('/api/posts');
 }
 
 getPostById(id: string) {
-  return this.http.get<any>(`http://localhost:3000/post/${id}`);
+  return this.http.get<any>(`/post/${id}`);
 }
 
 deletePost(id: string) {
   const headers = new HttpHeaders({'Authorization': localStorage.getItem('token') || ''});
-  return this.http.delete<{ success: boolean; msg: string }>(`http://localhost:3000/post/${id}`,{ headers } );
+  return this.http.delete<{ success: boolean; msg: string }>(`/post/${id}`,{ headers } );
 }
 
 
@@ -70,27 +70,27 @@ updatePost(id: string, post: any) {
     'Authorization': localStorage.getItem('token') || '',
     'Content-Type': 'application/json'
   });
-  return this.http.put(`http://localhost:3000/account/post/${id}`, post, { headers });
+  return this.http.put(`/account/post/${id}`, post, { headers });
 }
 
 getAllUsers() {
   const headers = new HttpHeaders({
     'Authorization': localStorage.getItem('token') || ''
   });
-  return this.http.get<any[]>('http://localhost:3000/account/users', { headers });
+  return this.http.get<any[]>('/account/users', { headers });
 }
 
 getUserPosts(login: string) {
   const headers = new HttpHeaders({
     'Authorization': localStorage.getItem('token') || ''
   });
-  return this.http.get<any[]>(`http://localhost:3000/account/user-posts/${login}`, { headers });
+  return this.http.get<any[]>(`/user-posts/${login}`, { headers });
 }
 deleteUser(userId: string) {
   const headers = new HttpHeaders({
     'Authorization': localStorage.getItem('token') || ''
   });
-  return this.http.delete<{ success: boolean; msg: string }>(`http://localhost:3000/account/user/${userId}`, { headers });
+  return this.http.delete<{ success: boolean; msg: string }>(`/account/user/${userId}`, { headers });
 }
 
 getComments(postId: string) {
@@ -98,7 +98,7 @@ getComments(postId: string) {
   const headers = new HttpHeaders({
     'Authorization': localStorage.getItem('token') || ''
   });
-  return this.http.get<any[]>(`http://localhost:3000/account/post/${postId}/comments`, { headers });
+  return this.http.get<any[]>(`/account/post/${postId}/comments`, { headers });
 }
 
 addComment(postId: string, text: string) {
@@ -106,14 +106,14 @@ addComment(postId: string, text: string) {
   const headers = new HttpHeaders({
     'Authorization': localStorage.getItem('token') || ''
   });
-  return this.http.post<any>(`http://localhost:3000/account/post/${postId}/comment`, { text }, { headers });
+  return this.http.post<any>(`/account/post/${postId}/comment`, { text }, { headers });
 }
 deleteComment(postId: string, commentId: string) {
   const token = localStorage.getItem('token');
   const headers = new HttpHeaders({
     'Authorization': localStorage.getItem('token') || ''
   });
-  return this.http.delete<any>(`http://localhost:3000/account/post/${postId}/comment/${commentId}`, { headers });
+  return this.http.delete<any>(`/account/post/${postId}/comment/${commentId}`, { headers });
 }
 
 
