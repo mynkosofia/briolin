@@ -84,7 +84,7 @@ getUserPosts(login: string) {
   const headers = new HttpHeaders({
     'Authorization': localStorage.getItem('token') || ''
   });
-  return this.http.get<any[]>(`/user-posts/${login}`, { headers });
+  return this.http.get<any[]>(`/account/user-posts/${login}`, { headers });
 }
 deleteUser(userId: string) {
   const headers = new HttpHeaders({
